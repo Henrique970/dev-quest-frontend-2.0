@@ -1,0 +1,54 @@
+/* O atributo align-content é uma mistura do align-items e do justify-content, só funciona quando aplicamos junto a ele a propriedade flex-wrap: wrap;. */
+/* Vai atuar ao longo do eixo transversal e alinhar os itens no início do container */
+
+.flex-start {
+    /* Vai alinhar os itens no início do container. */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.flex-end {
+    /* Vai alinhar os itens no final do container. */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.center {
+    /* Vai alinhar os itens no centro do container. */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    /* Coloquei parea cerntralizar os items que quebraram de linha para não ficarem da esquerda para direita */
+    justify-content: center;
+}
+
+.space-between {
+    /* Vai distribuir os itens igualmente, com o primeiro item no início e o último item no final do container. O espaço vem depois da linha quebrada, no eixo transversal. */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.space-around {
+    /* Vai distribuir os itens igualmente, com espaços iguais ao redor de cada item. */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.space-evenly {
+    /* Vai distribuir os itens igualmente, com espaços iguais entre eles. */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+
+.stretch {
+    /* Vai esticar os itens para preencher o container ao longo do eixo transversal. Para isso você não pode definir uma altura fixa no container, isso quando é row. Quando é column, você não pode definir uma largura fixa no container. */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}

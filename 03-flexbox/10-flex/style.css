@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+}
+
+.flex-0 {
+  /* O primero valor é para o flex-grow, o segundo para o flex-shrink e o terceiro para o flex-basis */
+  /* flex: 0 1 150px; */
+  
+  /* Colocando 0, todos os valores vão ser o padrão: flex-grow = 0, flex-shrink = 1 e flex-basis = 0 */
+  flex: 0;
+}
+
+.flex-1 {
+  /* Colocando 1, os valores vão ser: flex-grow = 1, flex-shrink = 1 e flex-basis = 0 */
+  flex: 1;
+}

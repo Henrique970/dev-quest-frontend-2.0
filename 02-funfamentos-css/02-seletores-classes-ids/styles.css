@@ -1,0 +1,144 @@
+/* 1 - Seletores básicos 
+
+Tipo: seleciona pelo nome da tag*/
+
+p {
+    color: blue;
+}
+
+/* _______________________________________________________________ */
+
+/* 2 - Seletores de classe (.nome-da-classe)
+
+Tipo: seleciona pelo nome da classe*/
+
+.destaque {
+    font-weight: bold;
+    background-color: yellow;
+}
+
+/* _______________________________________________________________ */
+
+/* 3 - Seletores de ID (#nome-do-id)
+
+Tipo: seleciona pelo nome do ID. O ideal é usar apenas uma vez por página*/
+
+#especial {
+    background-color: red;
+}
+
+/* _______________________________________________________________ */
+
+/* 4 - Seletores de agrupamento 
+
+Tipo: Permitem aplicar a mesma regra a vários seletores */
+
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+    color: green;
+}
+
+/* _______________________________________________________________ */
+
+/* 5 - Seletores de descêndencia e relacionamento descendente
+
+Tipo: seleciona elementos que são descendentes de um elemento pai específico */
+
+div p {
+    font-style: italic;
+    color: purple;
+}
+
+/* _______________________________________________________________ */
+
+/* 6 - Seletores de filho direto (>)
+
+Tipo: seleciona elementos que são filhos diretos de um elemento pai específico. Filho direto é um elemento que está diretamente dentro de outro elemento, sem outros elementos intermediários */
+
+div > p {
+    color: orange;
+}
+
+/* _______________________________________________________________ */
+
+/* 7 - Seletores adjacente (+)
+
+Tipo: seleciona um elemento que é imediatamente precedido por outro elemento. Adjacente é um elemento que está diretamente após outro elemento, sem outros elementos intermediários */
+
+h2 + p {
+    text-decoration: underline;
+    color: brown;
+}
+
+/* _______________________________________________________________ */
+
+/* 8 - Seletores gerais (~)
+
+Tipo: seleciona todos os elementos que são precedidos por um elemento específico, não necessariamente imediatamente. Geral é um elemento que está após outro elemento, podendo haver outros elementos intermediários */
+
+h1 ~ p {
+    letter-spacing: 2px;
+    color: teal;
+}
+
+/* _______________________________________________________________ */
+
+/* 9 - Seletores de atributo [atributo="valor"]
+
+Tipo: seleciona elementos com um atributo específico ou valor de atributo */
+
+a[target="_blank"] {
+    color: red;
+}
+
+input[type="text"] {
+    border: 2px solid;
+}
+
+/* _______________________________________________________________ */
+
+/* 10 - Seletores de pseudo-classes
+
+Tipo: seleciona elementos em um estado específico. Pseudo-classes são usadas para selecionar elementos com base em seu estado, como :hover, :focus, :visited, etc. */
+
+/* O hover vai aplicar a regra quando o mouse passar sobre o link */
+a:hover {
+    color: orange;
+
+}
+
+/* O first-child vai aplicar a regra ao primeiro elemento filho de um elemento pai */
+p:first-child {
+    font-size: 40px;
+    color: magenta;
+}
+
+/* _______________________________________________________________ */
+
+/* 11 - Seletores de pseudo-elementos
+
+Tipo: seleciona e estiliza partes específicas de um elemento. Pseudo-elementos são usados para criar elementos fictícios dentro de um elemento real, como ::before, ::after, ::first-letter, etc. */
+
+/* O first-letter vai aplicar a regra ao primeiro caractere de um elemento */
+p::first-letter {
+    font-size: 200%;
+    color: green;
+}
+
+/* O first-line vai aplicar a regra à primeira linha de um elemento */
+p::first-line {
+    font-weight: bold;
+    color: navy;
+}
+
+p {
+    color: blue
+}
+
+p .destaque {
+    color: green;
+}
+
+p #unico {
+    color: red;
+}

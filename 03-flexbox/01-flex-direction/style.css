@@ -1,0 +1,25 @@
+/* O div tem por padrão ficar em bloco e ficar um abaixo do outro, ou seja, display: block; */
+
+.row {
+    /* Por padrão o flex-direction é row. Elementos em linha um do lado do outro */
+    display: flex;
+    flex-direction: row;
+}
+
+.row-reverse {
+    /* Elementos em linha um do lado do outro, mas na ordem inversa. Não só a ordem dos elementos, mas também o sentido do eixo, pois vai da direita para a esquerda */
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.column {
+    /* Elementos em coluna um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+}
+
+.column-reverse {
+    /* Elementos em coluna um embaixo do outro, mas na ordem inversa. Não só a ordem dos elementos, mas também o sentido do eixo, pois vai de baixo para cima */
+    display: flex;
+    flex-direction: column-reverse;
+}

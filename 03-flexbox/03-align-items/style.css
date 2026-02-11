@@ -1,0 +1,42 @@
+/* O align items vai alinhar os itens do container no início ao longo do eixo transversal. Se for row o eixo transversal é o eixo vertical, se for column o eixo transversal é o eixo horizontal. */
+
+.flex-start {
+    /* Vai alinhar os itens no início do eixo transversal */
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-end {
+    /* Vai alinhar os itens no final do eixo transversal */
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.center {
+    /* Vai alinhar os itens no centro do eixo transversal */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stretch {
+    /* Vai esticar os itens para preencher o container ao longo do eixo transversal. É o padrão o align-items */
+    /* ELE NÃO VAI FUNCIONAR SE TIVERMOS APLICADO UMA LARGURA E UMA ALTURA FIXA AO ITEM */
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.baseline {
+    /* Vai alinhar os itens pela linha de base do texto */
+    display: flex;
+    align-items: baseline;
+}
+
+.container div .baseline-2 {
+    font-size: 40px;
+}
+.container div .baseline-3 {
+    font-size: 100px;
+}

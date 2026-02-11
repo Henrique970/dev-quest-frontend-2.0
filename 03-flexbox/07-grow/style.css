@@ -1,0 +1,23 @@
+/* O flex-grow define o quanto um elemento flexível deve crescer em relação aos outros elementos flexíveis dentro do container. Valores maiores significam que o elemento crescerá mais. */
+
+.container {
+  display: flex;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
+
+.grow-3 {
+  flex-grow: 3;
+}
+
+/* O cuidado a ser tomado é que mesmo que elemento tenha pioridade sobre outro, se o conteúdo do elemento for maior que o espaço disponível, ele pod eficar maior que os outros elementos flexíveis. */

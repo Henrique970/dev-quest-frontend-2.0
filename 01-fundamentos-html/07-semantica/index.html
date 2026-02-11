@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="João Silva, desenvolvedor Full Stack especializado em React." />
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <title>Sou um programador Full Stack com conhecimento em HTML, CSS, JS e React.</title>
+</head>
+
+<body>
+
+    <!-- O header é o cabeçalho da página. Jamais use o div para fazer um cabeçalho, pois ela não tem semântica, é uma tag de divisão. -->
+    <header>
+        <!-- O nav é a navegação do site. -->
+        <nav>
+            <!-- Lembre-se que na ul só pode usar li. Você pode dentro da li colocar alguma coisa, mas no ul é só li -->
+            <ul>
+                <!-- Quando você coloca # no href, você está fazendo um link interno para uma âncora dentro da mesma página. Clicando o site vai scrolar para a parte que fala sobre. Mas precisa colocar o id na section correspondente -->
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- O main é o conteúdo principal da página. Só pode ter um main por página -->
+    <main>
+
+        <!-- A section é uma seção do site. Pode ter várias section em um main -->
+        <section id="sobre">
+            <h1>João Silva</h1>
+            <h2>Desenvolvedor Full Stack</h2>
+
+
+            <p>Sou um desenvolvedor Full Stack com conhecimento em HTML, CSS, JS e React.</p>
+
+            <!-- Cada atributo tem os seus valores -->
+
+            <!-- Imagem.  -->
+            <!-- O src é o caminho da imagem. O alt é o texto alternativo que aparece caso a imagem não carregue, também serve para deficientes visuais, pois seus programas identificam esse texto. -->
+            <img src="images/foto-perfil.png" alt="Foto de anime de João Silva" />
+        </section>
+
+        <section id="habilidades">
+            <h3>Minhas habilidades</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>TypeScript</li>
+            </ul>
+        </section>
+
+        <section id="objetivos">
+            <h3>Meus objetivos de carreira</h3>
+            <ol>
+                <li>Dominar React e TypeScript</li>
+                <li>Conseguir uma vaga em uma empresa de tecnologia</li>
+                <li>Criar meu primeiro SASS</li>
+                <li>Ajudar ouros desenvolvedores a aprender programação</li>
+            </ol>
+        </section>
+
+        <section id="projetos">
+
+            <!-- A div é uma tag de divisão que não tem semântica, mas pode ser usada para agrupar elementos -->
+            <div>
+                <h3>Meus Projetos</h3>
+                <h4>Projeto de E-commerce</h4>
+                <a href="https://www.meuecomerce.com/" target="_blank">
+                    <img src="images/projeto1.jpg" alt="Projeto de comércio eletrônico" />
+                </a>
+                <p>Comércio eletrônico completo com login e pagamento</p>
+            </div>
+
+            <div>
+                <h4>Portifólio</h4>
+                <a href="https://www.meuportifolio.com/" target="_blank">
+                    <img src="images/projeto2.jpg" alt="Projeto de portifólio" />
+                </a>
+                <p>Portfólio criado com react e typescript</p>
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+    <!-- O footer é o rodapé da página. -->
+    <footer>
+
+        <h3>Links Úteis</h3>
+        <!-- Link -->
+        <p> Clique <a href="https://www.google.com/">Site do Google</a></p>
+        <!-- O atributo target="_blank" faz com que o link seja aberto em uma nova aba. É sempre bom colocar quando o link for externo, ou seja, de outro site. -->
+        <p>Veja meus vídeos no <a href="https://www.youtube.com/" target="_blank">YouTube</a></p>
+
+        <h3>Meus Contatos</h3>
+        <p>Email:
+            <!-- Quando for utilizar o Email, não pode esquecer do mailto, pois é o protocolo que permite abrir o cliente de email padrão do usuário. Sem ele o navegador não sabe como abrir o email. -->
+            <a href="mailto:joao.silva@email.com">Joao.silva@email.com</a>
+        </p>
+        <p>Telefone:
+            <!-- Tel para o número de telefone -->
+            <a href="tel:+5589999253429">+55 89 9 9925-3429</a>
+        </p>
+
+    </footer>
+
+    <!-- Você pode apenas digitar a tag e o depois apertar a tecla Tab e todo o conteúdo será gerado automaticamente -->
+    <!-- Ctrl + Escapço mostra os autocomplits do VS Code caso você tire sem querer -->
+
+
+
+</body>
+
+</html>

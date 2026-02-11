@@ -1,0 +1,44 @@
+/* A primeira coisa que você precisa entender é que todo elemento é visto como uma caixa dentro do navegador. E tem um estrutura bem definida como camadas de uma cêbola */
+
+/* A camada mais interna é a camada de conteúdo. */
+/* Ao redor do conteúdo, temos o padding (espaçamento interno) */
+/* Depois do padding, temos a border (bordas) */
+/* E por último, temos o margin (espaçamento externo) */
+
+/* Você pode ver a estrutura do box model no navegador usando o DevTools */
+
+p {
+    /* Colocando apenas um valor ele vai aplicar nos quatro lados */
+    /* padding: 34px; */
+
+    /* Colocando dois valores ele vai aplicar o primeiro valor para cima e baixo e o segundo para esquerda e direita */
+    /* padding: 10px 20px; */
+
+    /* Colocando quatro valores ele vai aplicar cima, direita, baixo e esquerda. Nessa sequência! */
+    padding: 10px 20px 30px 40px;
+
+    /* Também pode utilizar padding-top, padding-right, padding-bottom e padding-left */
+
+    /* Definindo o tamanho da borda, o tipo e a cor */
+    border: 5px solid blue;
+
+    /* No navegador o margin já vem por padrão com 16px em cima e em baixo do conteúdo */
+    margin: 20px 40px 60px 80px;
+
+    /* Altura e largura do elemento */
+    width: 300px;
+    height: 100px;
+
+    /* Define como o tamanho total do elemento incluindo padding e border */
+    box-sizing: border-box;
+}
+
+.caixa {
+    width: 200px;
+    height: 100px;
+    background-color: lightcyan;
+    padding: 20px;
+    border: 3px solid blue;
+    margin: 30px;
+    box-sizing: border-box;
+}

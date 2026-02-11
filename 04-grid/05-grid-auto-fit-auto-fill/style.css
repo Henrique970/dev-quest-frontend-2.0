@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  padding: 30px;
+  gap: 20px;
+
+  /* Aqui você está criando responsividade sem midia query */
+  /* O auto-fit faz com que o grid crie o máximo de colunas possíveis com o tamanho mínimo especificado */
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  
+  /* O auto-fill faz com que o grid vai tentar preencher o espaço disponível com colunas de tamanho mínimo especificado */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.container p {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Dica extra: é mais fácil ver o grid no navegador firefox, se você quiser. */

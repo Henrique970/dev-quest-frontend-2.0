@@ -1,0 +1,34 @@
+/* __________________________________________________________________________________ Cores ______________________________________________________________________ */
+/* Cores utilizando hexadecimal */
+
+.hexadecimal {
+    /* Usando o espectro de cores RGB. Os dois primeiros elementos são a tonalidade do vermelho, o terceiro e quarto são a tonalidade do verde e os dois últimos são a tonalidade do azul. A tonalidade vai de 00 a FF */
+    color: #000099;
+}
+
+/* _____________________________________________________ */
+
+/* Cores utilizando RGB */
+
+.rgb {
+    /* Usando o espectro de cores RGB. Cada valor varia de 0 a 255 */
+    color: rgb(0, 255, 255);
+}
+
+/* _____________________________________________________ */
+
+/* Cores utilizando RGBA */
+
+.rgba {
+    /* Usando o espectro de cores RGB com um canal alfa para definir a opacidade. Cada valor varia de 0 a 255 e o canal alfa varia de 0 (transparente) a 1 (opaco) */
+    color: rgba(255, 0, 255, 0.2);
+}
+
+/* _____________________________________________________________________________________ Fontes __________________________________________________________________ */
+
+/* Você pode pesquisar fontes no Google Fonts e importá-las para o seu projeto */
+
+body {
+    /* Aqui se a fonte "Roboto" não for encontrada corretamete ele vai mostrar sans-serif */
+    font-family: "Roboto", sans-serif;
+}

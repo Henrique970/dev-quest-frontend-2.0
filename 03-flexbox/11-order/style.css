@@ -1,0 +1,41 @@
+/* O order vai alterar a ordem dos elementos flexíveis dentro do container flex. Quanto maior o valor, o elemento vai mais para a direita, e quanto menor, mais para a esquerda. */
+
+.container {
+  display: flex;
+
+  /* Invertendo a ordem */
+  flex-direction: row-reverse;
+}
+
+.flex {
+  flex: 1;
+}
+
+.order-0 {
+  /* O padrão é 0 */
+  order: 0;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order--1 {
+  order: -1;
+}
+
+/* Valores negativos são permitidos e podem ser usados para mover elementos para a frente ou trás na ordem visual. */
+
+/* Se dois itens estiverem com o mesmo valor de order, eles serão exibidos na ordem em que foram declarados no HTML. */

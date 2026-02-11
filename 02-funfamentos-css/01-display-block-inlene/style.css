@@ -1,0 +1,33 @@
+/* display block - faz os elementos ocuparem todo o elemento do container. Se eu colocar elementos com display block, eles irão ficar um embaixo do outro */
+
+/* display inline - faz os elementos ficarem lado a lado, mas não permite que você defina largura e altura. Ele também só pega margin e padding pelos lados (right e left), mas não pelos top e bottom */
+
+/* display inline-block - combina as propriedades do inline e block. Ele permite que você defina largura e altura, mas mantém os elementos lado a lado */
+
+/* display none - remove o elemento do DOM, ou seja, ele não aparece na página */
+
+
+.container {
+    width: 500px;
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center; /* Centraliza os cards inline-block */
+}
+
+.card {
+    width: 120px; /* Agora o width funciona */
+    height: 100px; /* Agora o height funciona */
+    background-color: #9b59b6;
+    color: white;
+    padding: 20px;
+    margin: 10px; /* Margin funciona em todos os lados */
+    text-align: center;
+    vertical-align: top; /* Alinha os cards ao topo */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+    /* display: inline-block; Define o display como inline-block */
+    display: none;
+}
+
+span {
+    color: red;
+}

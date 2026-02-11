@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Site Responsivo</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<h1>Título Principal do Site</h1>
+			<p>Este é um parágrafo muito longo que vai demonstrar como o texto se comporta em diferentes tamanhos de tela. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		</main>
+
+		<!-- Para sites profissionais, vamos sempre querer usar imagens diferentes para serem responsivas sem perder a qualidade -->
+		<picture>
+			<!-- Usando imagens diferentes para diferentes tamanhos de tela -->
+			<!-- Embaixo eu quero dizer que quando a imgagem for menor que 768px, use a imagem mobile -->
+			<source media="(max-width: 768px)" srcset="./images/batman-mobile.jpg" />
+			
+			<!-- Imagem reserva, só vai entrar se nenhuma das outras for aplicada -->
+			<img src="./images/batman-desktop.jpg" alt="Batman" />
+		</picture>
+
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+		</ul>
+
+	</body>
+</html>

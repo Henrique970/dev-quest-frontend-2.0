@@ -1,0 +1,29 @@
+/* flex-wrap vai definir se seus itens vão quebrar em múltiplas linhas ou não. Ele age no eixo horizontal (row) e quando não há espaço suficiente, os itens são empilhados em linhas adicionais. Mas você pode colocar eles como coluna e assim ele quebra em linhas verticais. */
+
+.nowrap {
+    /* Vai manter os elementos em uma única linha. E quanto mais elementos você coloca mais ele diminui o tamanho para caber. nowrap é o valor padrão do flex-wrap */
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    /* Vai quebrar os elementos em múltiplas linhas, quando não há espaço suficiente */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.wrap-reverse {
+    /* Vai quebrar os elementos em múltiplas linhas, mas na ordem reversa */
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: column;
+}
+
+/* flex-flow é uma abreviação para flex-direction e flex-wrap. Com o flex-flow você pode definir os dois valores em uma única propriedade */
+
+.flex-flow {
+    display: flex;
+    /* O primeiro valor é para o flex-direction e o segundo para o flex-wrap */
+    flex-flow: column nowrap;
+}

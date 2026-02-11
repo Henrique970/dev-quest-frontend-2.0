@@ -1,0 +1,14 @@
+/* O gap serve para colocar espaçamento entre os elementos flexíveis. Tanto em linha quanto em coluna */
+
+.gap {
+  display: flex;
+  /* Quando colocamos apens um valor ele vai aplicar o mesmo espaçamento tanto horizontal quanto vertical */
+  /* gap: 50px; */
+
+  /* Quando colocamos dois valores, o primeiro é o espaçamento no column-gap e o segundo o row-gap.  */
+  gap: 20px 50px;
+  
+}
+
+/* Lembre-se que o gap cria espaçamento entre os elementos filhos, de um para o outro. Não é como o margin que cria espaçamento ao redor de um elemento. */
+

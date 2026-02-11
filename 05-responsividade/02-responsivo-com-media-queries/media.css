@@ -1,0 +1,23 @@
+/*  Celulareas (smartphones): 320px - 480px
+    Tablets: 481px - 768px
+    Laptops/Descktops pequenos: 769px - 1024px
+    Desktops grandes/TVs: 1025px e acima
+
+/* Esse é o formato da media query. O screen serve para indicar que a regra só será aplicada em telas, e não em impressoras ou outros dispositivos. Para essa regra funcionar ela precisa ser verdadeira */
+/* max-width determina o limite máximo de largura para aplicar a regra. E o min-width determina o limite mínimo de largura para aplicar a regra. */
+
+.header {
+    background-color: red;
+}
+/* Se estou usando min-width, então começo estilizando do menor para o maior. O max-width é o contrário. Mobile First é feito min-width */
+@media screen and (min-width: 768px) {
+    .header {
+        background-color: aqua;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        background-color: blueviolet;
+    }
+}

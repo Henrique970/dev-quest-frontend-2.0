@@ -1,0 +1,37 @@
+.container div{
+  border: 1px solid black;
+  color: white;
+  font-size: 20px;
+  background-color: blueviolet;
+}
+
+/* O grid faz com que os elementos filhos de um container sejam dispostos em uma grade */
+.container{
+  
+  display: grid;
+  
+  /* O inlene-grid coloca os elementos filhos em grade, mas na largura do conteúdo. A célula que tiver com maior conteúdo define o tamanho das outras */
+  /* display: inline-grid; */
+   
+  /* Quando defino gird-template-columns e coloco auto e auto, estou dizendo que ele vai se dividir em duas colunas. Posso colocar mais colunas. Você pode utilizar auto (automático), px, em, rem, %, fr (fração do conteúdo) e etc. */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+
+  /* A mesmas coisa nas linhas */
+  /* grid-template-rows: 200px 100px 50px; */
+
+  /* Com o repeat você decide com números a quantidade de colunas e o tamanho delas */
+  /* grid-template-columns: repeat(2, 1fr); */
+
+  /* A mesma coisa com as linhas */
+  /* grid-template-rows: repeat(5, 1fr); */
+
+  /* Posso também juntar os dois em um só. O primeiro repeat refere-se às linhas e o segundo às colunas */
+  grid-template: repeat(2, 150px) / repeat(3, 1fr);
+
+  /* O gap é o espaçamento entre os elementos do grid. Se usarmos o margin ele vai afetar o espaçamento entre os elementos do grid. Posso colocar dois valores sendo que o primeiro vai ser o espaçamento entre as linhas e o segundo entre as colunas. Se colocar apenas um valor vai servir para os dois */
+  /* gap: 20px 5px; */
+
+  /* Posso fazer de forma separada. */
+  column-gap: 20px;
+  row-gap: 20px;
+}

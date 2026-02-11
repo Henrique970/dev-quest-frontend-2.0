@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    height: 400px;
+    border: 1px solid #ccc;
+    width: 300px;
+   
+}
+
+.item {
+    width: 100px;
+    height: 50px;
+    background: lightblue;
+    margin: 10px;
+}
+
+/* Se você tem elementos que ficam apenas em uma linha, use o align-items */
+.item-center {
+    align-self: center;
+}
+
+/* Se você tem elementos que ficam em várias linhas, use o align-content com o flex-wrap */
+.content-center {
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/* Não esquueça que o align-self só funciona em elementos individuais, ele é um flex-item. */
+.self-center {
+    align-self: center;
+}
+
+
+/* Quando o HTML é mais complicado você sempre tem que ver primeiro quem é o pai direto dos elementos que você quer posicionar. Porque geralmente você via querer manipular todos os elementos filhos do pai de umasó vez. E o que mais você vai querer fazer é posicionar elementos no centro geralmente */

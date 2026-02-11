@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    /* Utilizar pixels para definir o tamanho das fontes pode ser problemático, já que não se adapta às configurações do navegador do usuário. A solução é optar por unidades relativas como "rem", que se baseia no tamanho da fonte raiz do documento (geralmente a tag <html>).Caso o tamanho raiz não esteja definido, ele será ajustado conforme as configurações padrão do navegador. Vale lembrar que 1rem equivale a 16px, salvo modificações no tamanho base. */
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+main {
+    /* Definindo limites de largura responsivos, minima e maxima */
+    /* min-width: 320px;
+    max-width: 1024px; */
+
+    /* Também posso usar unidade de medidas relativas */
+    max-width: 80%;
+
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px;
+    background-color: aqua;
+}
+
+ul {
+    font-size: 40px;
+}
+
+li {
+    /* O em é uma unidade relativa ao tamanho da fonte do elemento pai */
+    font-size: 1em;
+}

@@ -1,0 +1,51 @@
+/* O jutify-content é uma propriedade do CSS Flexbox que define como os itens dentro de um contêiner flexível são distribuídos ao longo do eixo principal (horizontal por padrão). */
+
+.flex-start {
+    /* Alinha os itens no início do contêiner ao longo do eixo principal. Não acontece nada nessca já que o flex-start é o padrão. Mas se o flex-direction for column, o flex-start alinha os itens no topo do contêiner. */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flex-end {
+    /* Alinha os itens no final do contêiner ao longo do eixo principal. */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.center {
+    /* Centraliza os itens no contêiner ao longo do eixo principal. */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.space-between {
+    /* Distribui os itens igualmente ao longo do eixo principal, com o primeiro item alinhado ao início e o último item alinhado ao final do contêiner. */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.space-around {
+    /* Distribui os itens igualmente ao longo do eixo principal, com espaços iguais ao redor de cada item. Mas ele também da um espaçamento nas extremidades do contêiner. */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.space-evenly {
+    /* Distribui os itens igualmente ao longo do eixo principal, com espaços iguais entre todos os itens, incluindo as extremidades do contêiner. */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.container .space-between div,
+.container .space-evenly div,
+.container .space-around div {
+    margin: 0;
+}

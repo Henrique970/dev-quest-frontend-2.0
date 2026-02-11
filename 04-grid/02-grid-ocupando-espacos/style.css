@@ -1,0 +1,55 @@
+.laranja {
+  background-color: #B25954;
+}
+
+.marrom {
+  background-color: #766A67;
+}
+
+.verde-claro {
+  background-color: #309C8B;
+}
+
+.verde-escuro{
+  background-color: #35636C;
+}
+
+.azul {
+  background-color: #43ABC0;
+}
+
+.rosa {
+  background-color: #C55BA3;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 15px;
+}
+
+.verde-claro {
+  /* O grid-column-start e grid-column-end definem em quais colunas o elemento vai ocupar */
+  /* grid-column-start: 1; */
+
+  /* No grid-column-end, você define o número da coluna onde o elemento termina. O elemento vai ocupar todas as colunas entre grid-column-start e grid-column-end. Se você colocar 1 e 3 ele vai ocupar as colunas 1 e 2 */
+  /* grid-column-end: 3; */
+
+  /* Mesma coisa para as linhas */
+  /* grid-row-start: 1; */
+  /* grid-row-end: 4; */
+
+  /* Forma abreviada: grid-column: start / end; grid-row: start / end; */
+  /* grid-column: 1 / 3; */
+  /* grid-row: 1 / 4; */
+
+  /* Mas para facilitar e você não lembrar que precisa colocar uma casa a mais você pode usar o span */
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.azul {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 1;
+}

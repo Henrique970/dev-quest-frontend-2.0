@@ -1,0 +1,26 @@
+/* O align-self é usado em CSS, dentro de um container flexível. Ele ajusta a posição de um item específico ao longo do eixo transversal (vertical, se a direção do flex for horizontal). */
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.auto {
+  align-self: auto; /* Padrão: o item segue o alinhamento definido pelo container flexível */
+}
+
+.flex-start {
+  align-self: flex-start; /* Alinha o item ao início do container flexível */
+}
+
+.flex-end {
+  align-self: flex-end; /* Alinha o item ao final do container flexível */
+}
+
+.center {
+  align-self: center; /* Centraliza o item dentro do container flexível */
+}
+
+.stretch {
+  align-self: stretch; /* Estica o item para preencher o container flexível. O align-items tem stretch como padrão. Não funciona quando o item tem uma altura ou largura definida. */
+}
