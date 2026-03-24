@@ -1,5 +1,3 @@
-//  find - é muito útil como por exemplo você quer procurar o nome de um produto pelo ID
-
 const numeros = [1, 2, 3, 4, 5]
 
 
@@ -16,6 +14,7 @@ const numerosMaiorTres = numeros.find((numero) => numero > 3)
 
 const resultadoReduce = numeros.reduce((acumulador, item)=>{
     return acumulador + item;
+
 
 }, 0)
 

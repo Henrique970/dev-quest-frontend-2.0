@@ -1,0 +1,1 @@
+// Destruturação de objetos é Copilot Chat
