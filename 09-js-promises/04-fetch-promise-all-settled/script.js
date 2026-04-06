@@ -30,7 +30,7 @@ const loadSingleMovie = async (id) => {
 const loadMultipleMoviesAll = async (moviesIds) => {
         try {
             const promises = moviesIds.map( async (id) => {
-                const response = await fetch(`${baseURL}/films/${id}`);
+                const   response = await fetch(`${baseURL}/films/${id}`);
 
                 if (!response.ok) {
                     throw new Error(`Erro ao carregar o filme com id: ${id}`);
