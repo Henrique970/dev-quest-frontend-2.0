@@ -24,4 +24,4 @@ const movies = ["Batman O cavaleiro das travas", "Homem Aranha", "Vingadores"];
 movies.forEach((movie) => {
     console.log(movie.toUpperCase());
 });
-// Ele não dispensa os testes e nem blinda de todos os erros, então muito cuidado.
+// Ele não dispensa os testes e nem blinda de todos os erros, então muito cuidado
