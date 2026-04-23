@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    // Invalidando o uso do any.
+    "noImplicitAny": true
+  }
+}
