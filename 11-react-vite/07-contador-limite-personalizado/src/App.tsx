@@ -43,8 +43,8 @@ function App() {
       <h2>Contador Atual: {count}</h2>
       <p>Configurado entre: {initialValue} e {endValue}</p>
     
-      <button className="counter" onClick={decrementNumber}>- Diminuir</button>
-      <button className="counter" onClick={incrementNumber} style={{ marginLeft: "10px" }}>+ Aumentar</button>
+      <button onClick={decrementNumber}>- Diminuir</button>
+      <button onClick={incrementNumber} style={{ marginLeft: "10px" }}>+ Aumentar</button>
     </>
   )
 }
