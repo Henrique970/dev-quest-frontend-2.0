@@ -15,6 +15,6 @@ export const MyInput = () => {
             <p>Você digitou: {text}</p>
             {/* Criando uma função para limpar o input */}
             <button onClick={() => setText("")}>Limpar</button>
-        </>
+        </>  
     );
-};
+};      

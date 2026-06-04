@@ -22,7 +22,7 @@ function App() {
   };
   return (
     <>
-    <h2>Contador: {count}</h2>
+    <h2>Contador: { }</h2>
       <button onClick={incrementCount}>
         Incrementar contador
       </button>
