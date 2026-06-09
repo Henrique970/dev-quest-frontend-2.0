@@ -15,8 +15,6 @@ export const UserInput = () => {
         setdisplayedText(typedText);
     }
 
-    
-
     return (
         <>
             <form action="" onSubmit={handleSubmit}>
