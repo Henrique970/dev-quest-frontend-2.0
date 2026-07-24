@@ -10,12 +10,15 @@ const registerUserFormSchema = z.object({
     // min é o mínimo de caracteres que o input pode receber.
     email: z.string().min(1, 'Campo obrigatório').email('Preencha o e-mail corretamente'),
     password: z.string().min(6, 'No mínimo 6 caracteres'),
-    comfirmPassword: z.string().min(6, 'No mínimo 6 caracteres')
+    confirmPassword: z.string().min(6, 'No mínimo 6 caracteres')
+}).refine((data) => data.password === data.confirmPassword, {
+    message: "As senhas não coincidem",
+    path: ["confirmPassword"]
 });
 
 // Defindo os tipos desses campos. É o zod.
 // z.infer<> é uma utilidade de tipo. Vai extrair para gente automaticamente o tipo, baseado no esqueca do zod que criamos acima.
-type resgisterUserFormData = z.infer<typeof registerUserFormSchema>
+type registerUserFormData = z.infer<typeof registerUserFormSchema>
 
 const Form = () => {
 
@@ -25,7 +28,7 @@ const Form = () => {
     //             isSubmitting: indicar quando o formulário está sendo enviado.
     const {
         handleSubmit, register, formState: { errors, isSubmitting }
-    } = useForm<resgisterUserFormData>({
+    } = useForm<registerUserFormData>({
         // Vai definir que a validação vai acontecer quando o campo perde o foco. No momento o usuário sai do campo do input, vai acontecer a validação
         mode: 'onBlur',
 
@@ -37,25 +40,37 @@ const Form = () => {
     });
 
     // Simulando a envio de dados para um Banco de Dados
-    const onSubmit: SubmitHandler<resgisterUserFormData> = async (data: resgisterUserFormData) => {
+    const onSubmit: SubmitHandler<registerUserFormData> = async (data: registerUserFormData) => {
         await fetch('http://localhost:3333/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
-        })
-    }
+        });
+    };
 
     return (
         <form className="container" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="email">E-mail</label>
             <input type="email" id="email" placeholder="Informe seu e-mail" {...register("email")} />
 
+            {
+                errors?.email && <p>{errors?.email?.message}</p>
+            }
+
             <label htmlFor="password">Senha</label>
             <input type="password" id="password" placeholder="Informe sua senha" {...register("password")} />
 
-            <label htmlFor="confirmPassword">Confirmar Senha</label>
-            <input type="password" id="confirmPassword" placeholder="Confirme sua senha" {...register("comfirmPassword")} />
+            {
+                errors?.password && <p>{errors?.password?.message}</p>
+            }
 
+            <label htmlFor="confirmPassword">Confirmar Senha</label>
+            <input type="password" id="confirmPassword" placeholder="Confirme sua senha" {...register("confirmPassword")} />
+
+            {
+                errors?.confirmPassword && <p>{errors?.confirmPassword?.message}</p>
+            }
+            
             <button type="submit" disabled={isSubmitting} >Cadastre-se</button>
         </form>
     )
