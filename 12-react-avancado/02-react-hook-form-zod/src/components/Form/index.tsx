@@ -8,9 +8,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 const registerUserFormSchema = z.object({
     // Assim o usuário receberá uma mensagem caso não esteja escrevendo o e-mail corretamente
     // min é o mínimo de caracteres que o input pode receber.
-    email: z.string().min(1, 'Campo obrigatório').email('Preencha o e-mail corretamente'),
-    password: z.string().min(6, 'No mínimo 6 caracteres'),
-    confirmPassword: z.string().min(6, 'No mínimo 6 caracteres')
+    email: z.string().nonempty('Campo obrigatório').min(1, 'Campo obrigatório').email('Preencha o e-mail corretamente'),
+    phone: z.string().nonempty('Campo obrigatório').regex(/^\d+$/, 'O telefone deve conter apenas números').min(10, 'O telefone deve ter no mínimo 10 dígitos').max(11, 'O telefone deve ter no máximo 11 dígitos'),
+    password: z.string().nonempty('Campo obrigatório').min(6, 'No mínimo 6 caracteres'),
+    confirmPassword: z.string().nonempty('Campo obrigatório').min(6, 'No mínimo 6 caracteres')
 }).refine((data) => data.password === data.confirmPassword, {
     message: "As senhas não coincidem",
     path: ["confirmPassword"]
@@ -55,6 +56,13 @@ const Form = () => {
 
             {
                 errors?.email && <p>{errors?.email?.message}</p>
+            }
+
+            <label htmlFor="phone">Telefone</label>
+            <input type="text" id="phone" placeholder="Informe seu telefone" {...register("phone")} />
+
+            {
+                errors?.phone && <p>{errors?.phone?.message}</p>
             }
 
             <label htmlFor="password">Senha</label>
