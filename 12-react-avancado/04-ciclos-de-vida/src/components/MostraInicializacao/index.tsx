@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 export const MostraInicialização = ({ mensagem }: {mensagem : string}) => {
-    const [estado, setEstadp] = useState('inicialização');
+    const [estado, setEstado] = useState('inicialização');
     
     useEffect(() => {
         console.log('Executa o useEffect ao renderizar o componente')
